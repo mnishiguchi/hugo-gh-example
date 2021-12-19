@@ -1,0 +1,21 @@
+<head>
+  <title>
+    {{- if and .Params.Title (not (eq .Params.Title .Site.Title)) -}}
+      {{ .Params.Title }} | {{ .Site.Title }}
+    {{- else -}}
+      {{ .Site.Title }}
+    {{- end -}}
+  </title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+  <style>
+    main {
+      min-height: 50vh;
+    }
+  </style>
+</head>
