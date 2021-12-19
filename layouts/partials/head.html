@@ -25,4 +25,17 @@
     {{ $styles := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS $cssOpts | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
   {{ end }}
+
+  {{/*
+    JS
+    - https://gohugo.io/hugo-pipes/js/
+    - https://github.com/luizdepra/hugo-coder/blob/29a7a942b7c6e494dd8cfb941f0950504769528c/layouts/_default/baseof.html#L116-L122
+  */}}
+  {{ if .Site.IsServer }}
+    {{ $script := resources.Get "js/main.js" | js.Build }}
+    <script src="{{ $script.RelPermalink }}"></script>
+  {{ else }}
+    {{ $script := resources.Get "js/main.js" | js.Build | minify | fingerprint }}
+    <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+  {{ end }}
 </head>
