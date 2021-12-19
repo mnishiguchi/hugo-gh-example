@@ -1,5 +1,5 @@
 # https://gohugo.io/getting-started/configuration/#all-configuration-settings
-baseURL: '/'
+baseURL: 'https://mnishiguchi.github.io/hugo-gh-example'
 languageCode: 'en-us'
 title: 'My New Hugo Site'
 
