@@ -1,7 +1,6 @@
 ---
 title: "My First Post"
 date: 2021-12-18T19:34:30-05:00
-draft: true
 ---
 
 Ea amet voluptate do aliquip pariatur enim.
