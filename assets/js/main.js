@@ -1,6 +1,7 @@
+// https://www.chartjs.org/docs/3.6.1/getting-started/integration.html#bundlers-webpack-rollup-etc
+import Chart from 'chart.js/auto'
 import Navbar from './navbar'
-import BarChart from './bar-chart'
 
 Navbar.init()
 
-window.BarChart = BarChart
+window.Chart = Chart

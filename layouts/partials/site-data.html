@@ -1,0 +1,9 @@
+{{/*
+
+  Make all the static JSON data be available in JavaScript.
+
+*/}}
+<script>
+  const data = {{ $.Site.Data | jsonify }}
+  window.siteData = JSON.parse(data)
+</script>
