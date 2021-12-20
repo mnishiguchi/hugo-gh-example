@@ -6,7 +6,7 @@
 <meta http-equiv=x-ua-compatible content="ie=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel=stylesheet href=/hugo-gh-example/css/main.min.1b00efc950b9576ea685ea210b6028ee4b5aac00e016cd9ecf060bd5f58565e6.css integrity="sha256-GwDvyVC5V26mheohC2Ao7ktarADgFs2ezwYL1fWFZeY=" crossorigin=anonymous media=screen>
-<script src=/hugo-gh-example/js/main.min.b362f1c607fd1c994d702e44cc535074c5eb92e906abb21a60d30648acf4436f.js integrity="sha256-s2Lxxgf9HJlNcC5EzFNQdMXrkukGq7IaYNMGSKz0Q28="></script>
+<script src=/hugo-gh-example/js/main.min.bfeb77675402fc33c9cf68114db3e310e558bb3e1ffddc6031487f2842574bfe.js integrity="sha256-v+t3Z1QC/DPJz2gRTbPjEOVYuz4f/dxgMUh/KEJXS/4="></script>
 </head>
 <body>
 <nav class=navbar role=navigation aria-label="main navigation">
@@ -35,9 +35,10 @@
 <main class="container my-6 px-4">
 <p>
 <canvas id=myChart></canvas>
-<script>let barChart;document.addEventListener('DOMContentLoaded',()=>{barChart=BarChart.init('myChart')})</script>
+<script>document.addEventListener('DOMContentLoaded',()=>{const a={type:'bar',data:{labels:window.siteData.chart1.map(a=>a.name),datasets:[{label:'# of Votes',data:window.siteData.chart1.map(a=>a.value),backgroundColor:['rgba(255, 99, 132, 0.2)','rgba(54, 162, 235, 0.2)','rgba(255, 206, 86, 0.2)','rgba(75, 192, 192, 0.2)','rgba(153, 102, 255, 0.2)','rgba(255, 159, 64, 0.2)'],borderColor:['rgba(255, 99, 132, 1)','rgba(54, 162, 235, 1)','rgba(255, 206, 86, 1)','rgba(75, 192, 192, 1)','rgba(153, 102, 255, 1)','rgba(255, 159, 64, 1)'],borderWidth:1}]},options:{scales:{y:{beginAtZero:!0}}}};new Chart('myChart',a)})</script>
 </p>
 </main>
+<script>const data='{"chart1":[{"name":"red","value":12},{"name":"blue","value":19},{"name":"yellow","value":3},{"name":"green","value":5},{"name":"purple","value":2},{"name":"orange","value":3}],"chart2":[{"name":"hello","value":1},{"name":"world","value":1}]}';window.siteData=JSON.parse(data)</script>
 <footer class=footer>
 <div class=content>
 <p>&copy; My New Hugo Site 2021 </p>
