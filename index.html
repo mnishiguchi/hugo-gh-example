@@ -26,6 +26,7 @@
 </div>
 </div>
 </nav>
+<script>window.siteData=JSON.parse('{"chart1":[{"name":"red","value":12},{"name":"blue","value":19},{"name":"yellow","value":3},{"name":"green","value":5},{"name":"purple","value":2},{"name":"orange","value":3}],"chart2":[{"name":"hello","value":1},{"name":"world","value":1}]}')</script>
 <section class="hero is-primary">
 <div class=hero-body>
 <p class=title>My New Hugo Site</p>
@@ -38,7 +39,6 @@
 <script>document.addEventListener('DOMContentLoaded',()=>{const a={type:'bar',data:{labels:window.siteData.chart1.map(a=>a.name),datasets:[{label:'# of Votes',data:window.siteData.chart1.map(a=>a.value),backgroundColor:['rgba(255, 99, 132, 0.2)','rgba(54, 162, 235, 0.2)','rgba(255, 206, 86, 0.2)','rgba(75, 192, 192, 0.2)','rgba(153, 102, 255, 0.2)','rgba(255, 159, 64, 0.2)'],borderColor:['rgba(255, 99, 132, 1)','rgba(54, 162, 235, 1)','rgba(255, 206, 86, 1)','rgba(75, 192, 192, 1)','rgba(153, 102, 255, 1)','rgba(255, 159, 64, 1)'],borderWidth:1}]},options:{scales:{y:{beginAtZero:!0}}}};new Chart('myChart',a)})</script>
 </p>
 </main>
-<script>const data='{"chart1":[{"name":"red","value":12},{"name":"blue","value":19},{"name":"yellow","value":3},{"name":"green","value":5},{"name":"purple","value":2},{"name":"orange","value":3}],"chart2":[{"name":"hello","value":1},{"name":"world","value":1}]}';window.siteData=JSON.parse(data)</script>
 <footer class=footer>
 <div class=content>
 <p>&copy; My New Hugo Site 2021 </p>
