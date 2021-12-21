@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+{{ partial "site-data" . }}
+
 <section class="hero is-primary">
   <div class="hero-body">
     <p class="title">{{.Site.Title}}</p>
@@ -10,7 +12,5 @@
 <main class="container my-6 px-4">
   <p>{{ .Content }}</p>
 </main>
-
-{{ partial "site-data" . }}
 
 {{ end }}
